@@ -1,0 +1,42 @@
+{
+  "name": "zakrivayuschiy-teg-f",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/lizibrizi/zakrivayuschiy-teg-f#readme",
+  "bugs": {
+    "url": "https://github.com/lizibrizi/zakrivayuschiy-teg-f/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lizibrizi/zakrivayuschiy-teg-f.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server",
+    "test": "echo 'Привет!'",
+    "check": "prettier --check './src/**/*.{html,css,js}'",
+    "format": "prettier --write './src/**/*.{html,css,js}'",
+    "lint": "stylelint './src/**/*.css'",
+    "lintfix": "stylelint './src/**/*.css' --fix",
+    "checkAll": "npm run check && npm run lint",
+    "fixAll": "npm run format && npm run lintfix"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.3",
+    "del": "^6.0.0",
+    "gulp": "^5.0.0",
+    "gulp-concat-css": "^3.1.0",
+    "gulp-plumber": "^1.2.1",
+    "prettier": "^3.5.3",
+    "stylelint": "^16.17.0"
+  },
+  "volta": {
+    "node": "23.10.0"
+  },
+  "dependencies": {
+    "live-server": "^1.2.2"
+  }
+}
