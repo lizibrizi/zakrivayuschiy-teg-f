@@ -6,7 +6,7 @@
     --font-size: 18px;
     --font-size-card-label: 14px;
     --color: #000;
-    --shadow-color: #a91d1d;
+    --shadow-color: #fff;
     --background-color: #fff;
       
 /*    --content-size: 375px, 100%, 700px;*/
@@ -16,6 +16,7 @@
     --main-border: 2px solid black;
     --heart-contour-color: black;
     --heart-sparks-color: red;
+    
     --background-image: 
     repeating-linear-gradient(
         180deg,

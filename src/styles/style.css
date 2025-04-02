@@ -36,6 +36,10 @@
   margin-block-end: 100px;
   justify-items: center;
 }
+.content-section {
+  margin: 0 auto;
+  max-inline-size: 700px;
+}
 
 .header {
   font-family: var(--accent-font);
@@ -103,7 +107,7 @@
   text-shadow: 0 0 1px var(--shadow-color);
   -webkit-text-stroke: 1px var(--shadow-color);
   mix-blend-mode: hard-light;
-  opacity: 0.7;
+  opacity: 0.5;
   z-index: 1;
 }
 
@@ -155,27 +159,11 @@
   filter: sepia(20%) hue-rotate(90deg) saturate(55%);
 }
 
-.sparks {
-  opacity: 0;
-}
-
 .card__buttons {
   display: flex;
   gap: 8px;
   justify-content: flex-end;
   margin: 0 25px 25px;
-}
-
-.card__icon-button {
-  position: relative;
-  display: flex;
-  align-items: center;
-  border: none;
-  padding: var(--border-width);
-  background-color: transparent;
-  transition: outline var(--transform-time);
-  transition-timing-function: var(--transition-function);
-  cursor: pointer;
 }
 
 .button__text {
@@ -185,8 +173,9 @@
   color: var(--button-text-color);
   font-family: var(--accent-font), sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: var(--button-font-size);
   line-height: 90%;
+  mix-blend-mode: difference;
 }
 
 .decorated_button {
@@ -204,12 +193,6 @@
   background-color: transparent;
 }
 
-.decorated_button_text {
-  font-size: var(--button-font-size);
-  mix-blend-mode: difference;
-  margin-right: 5px;
-}
-
 .decorated_button::before {
   content: '';
   position: absolute;
@@ -220,16 +203,34 @@
 }
 
 .decorated_button:focus-visible {
-  outline: 2px solid var(--color);
+  box-shadow: 2px 2px 0 1px var(--color);
 }
 
 .decorated_button:focus {
   outline: none;
-  box-shadow: 2px 2px 0 1px var(--color);
 }
 
 .decorated_button:hover::before {
   translate: 0%;
+}
+
+.card__like-button {
+  padding-block: 8px;
+  align-self: end;
+  width: 130px;
+  height: 38px;
+}
+
+.card__icon-button {
+  position: relative;
+  height: 38px;
+  display: flex;
+  background-color: transparent;
+  border: none;
+  transition: outline var(--time_step) ease;
+  align-self: center;
+  padding-inline: 0;
+  cursor: pointer;
 }
 
 .footer {
@@ -244,11 +245,11 @@
   align-items: center;
   gap: 8px;
   width: 100%;
-  padding: 18.5px 0;
+  padding: 15px;
   text-align: center;
-  transition: box-shadow var(--transform-time);
-  transition-timing-function: var(--transition-function);
+  transition: box-shadow var(--time_step) ease;
   cursor: pointer;
+  background-color: #fff;
 }
 
 .footer__button:focus {
@@ -258,24 +259,23 @@
 .footer__button-image {
   position: relative;
   z-index: 2;
+  max-width: 21px;
+  height: auto;
   color: var(--button-text-color);
-  block-size: 28px;
-  inline-size: auto;
   mix-blend-mode: difference;
 }
 
 .dialog {
   position: fixed;
   inset: 0;
-  border: var(--border-width) solid var(--accent-clr);
+  border: var(--main-border);
   padding: 32px 42px;
-  color: var(--accent-clr);
+  color: var(--color);
   font-family: var(--accent-font), sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 150%;
   text-transform: uppercase;
-  background-color: var(--background-clr);
   transition: opacity 0.3s ease-in-out;
   max-inline-size: 343px;
 }
@@ -283,7 +283,6 @@
 .dialog__form {
   display: grid;
   grid-template-columns: 0.3fr 1fr;
-  grid-template-rows: 1fr fit-content;
   row-gap: 30px;
 }
 
@@ -317,7 +316,7 @@
   .card_label {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--shadow-color);
-    text-stroke: 1px var(--shadow-color);
+    (text-stroke: 1px var(--shadow-color));
   }
 }
 
@@ -331,7 +330,6 @@
   .header {
     margin-top: 27vw;
     margin-bottom: 28vw;
-    /* aspect-ratio: 235 / 109; */
     block-size: 325px;
   }
 
@@ -340,30 +338,17 @@
     letter-spacing: normal;
   }
 
-  .article_info {
-    padding: 20px 27px 25px 27px;
-  }
-
   .card_label {
     top: 20px;
     right: 10px;
   }
 
-  .save_button {
+  .footer__button {
+    display: flex;
     flex-direction: column;
-    width: 312px;
-    height: 84px;
-    margin: 0;
-    gap: 4px;
   }
 
-  .floppy_svg {
-    width: 32px;
-    height: 32px;
-  }
-
-  .decorated_button_text {
-    margin-right: 2px;
-    margin-bottom: 4px;
+  .footer__button-image {
+    max-width: 28px;
   }
 }
