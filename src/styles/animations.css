@@ -58,7 +58,6 @@
   transition: fill var(--time_step) ease 0.05s;
 }
 
-////
 .card__icon-button .is-liked .core {
   fill: var(--heart-sparks-color);
   transition: fill var(--time_step) ease;
@@ -82,12 +81,4 @@
 .card__icon-button .is-liked .sparks {
   animation: sparks var(--time_step) 1 ease-in;
 }
-
-.card__icon-button:focus {
-  outline: none;
-}
-
-.card__icon-button:focus-visible {
-  border: var(--main-border);
-  transition: border var(--time_step) ease;
-}
+ 

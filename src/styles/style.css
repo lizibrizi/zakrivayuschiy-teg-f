@@ -78,8 +78,7 @@
 
 .card {
   outline: 2px solid var(--color);
-  width: 100%;
-  /*  width: clamp(var(--content-size));*/
+  width: clamp(var(--content-size));
   background-color: white;
 }
 
@@ -226,17 +225,26 @@
   height: 38px;
   display: flex;
   background-color: transparent;
-  border: none;
-  outline: 2px solid transparent;
+  border: 2px solid transparent;
   transition: outline var(--time_step) ease;
   align-self: center;
   padding-inline: 0;
   cursor: pointer;
 }
 
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border: var(--main-border);
+  transition: border var(--time_step) ease;
+}
+
 .sparks {
   opacity:0;
 }
+
 .footer {
   margin: 50px auto 0;
   background-color: var(--background-clr);
@@ -325,22 +333,6 @@
 }
 
 @media (width <= 375px) {
-  .main,
-  .header,
-  .footer {
-    width: 100%;
-  }
-
-  .header {
-    margin-top: 27vw;
-    margin-bottom: 28vw;
-    block-size: 325px;
-  }
-
-  .header_title {
-    line-height: 49px;
-    letter-spacing: normal;
-  }
 
   .card_label {
     top: 20px;
