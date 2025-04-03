@@ -56,7 +56,7 @@
 }
 
 .header_size {
- width: clamp(var(--content-size));
+  width: clamp(var(--content-size));
 }
 
 .header_title {
@@ -226,7 +226,7 @@
   display: flex;
   background-color: transparent;
   border: 2px solid transparent;
-  transition: outline var(--time_step) ease;
+  transition: outline var(--) ease;
   align-self: center;
   padding-inline: 0;
   cursor: pointer;
@@ -238,11 +238,11 @@
 
 .card__icon-button:focus-visible {
   border: var(--main-border);
-  transition: border var(--time_step) ease;
+  transition: border var(--transform-time) ease;
 }
 
 .sparks {
-  opacity:0;
+  opacity: 0;
 }
 
 .footer {
@@ -259,7 +259,7 @@
   width: 100%;
   padding: 15px;
   text-align: center;
-  transition: box-shadow var(--time_step) ease;
+  transition: box-shadow var(--transform-time) ease;
   cursor: pointer;
   background-color: #fff;
 }
@@ -328,12 +328,10 @@
   .card_label {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--shadow-color);
-    (text-shadow: 1px var(--shadow-color));
   }
 }
 
-@media (width <= 375px) {
-
+@media (width <= 376px) {
   .card_label {
     top: 20px;
     right: 10px;

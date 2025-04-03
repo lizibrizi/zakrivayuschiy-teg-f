@@ -22,7 +22,7 @@
     repeating-linear-gradient(90deg, #d3d3d3 0 2px, rgb(0 0 0 / 0) 2px 4px),
     linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
 
-  --time_step: 0.3s;
+  --transform-time: 0.3s;
 
   --page-width: clamp(23.438rem, 0rem + 100vw, 43.75rem);
   --header-title-font-size: clamp(3.063rem, 1.909rem + 4.92vw, 4.063rem);
