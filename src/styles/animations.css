@@ -33,7 +33,7 @@
   transition: fill var(--time_step) ease 0.03s;
 }
 
-.button_heart .main-body {
+.card__icon-button .main-body {
   fill: transparent;
   transition: fill var(--time_step) ease 0s;
 }
@@ -58,14 +58,15 @@
   transition: fill var(--time_step) ease 0.05s;
 }
 
+////
 .card__icon-button .is-liked .core {
   fill: var(--heart-sparks-color);
-  transition: fill var(--time_step) linear 0s;
+  transition: fill var(--time_step) ease;
 }
 
 .card__icon-button .is-liked .main-body {
   fill: var(--heart-sparks-color);
-  transition: fill var(--time_step) linear 0.05s;
+  transition: fill var(--time_step) ease 0.05s;
 }
 
 .card__icon-button .is-liked .contour {
@@ -73,16 +74,20 @@
   transition: fill var(--time_step) linear 0.06s;
 }
 
-.card__icon-button .is-liked {
+.card__icon-button .is-liked .heart {
   animation: like var(--time_step) ease-in 0.1s 1;
   transform-origin: center;
 }
 
 .card__icon-button .is-liked .sparks {
-  animation: sparks var(--time_step) ease-in var(--time_step) 1;
+  animation: sparks var(--time_step) 1 ease-in;
+}
+
+.card__icon-button:focus {
+  outline: none;
 }
 
 .card__icon-button:focus-visible {
-  outline-color: black;
-  transition: outline-color var(--time_step) linear;
+  border: var(--main-border);
+  transition: border var(--time_step) ease;
 }

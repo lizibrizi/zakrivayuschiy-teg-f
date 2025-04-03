@@ -56,7 +56,7 @@
 }
 
 .header_size {
-  /*  width: clamp(var(--content-size));*/
+ width: clamp(var(--content-size));
 }
 
 .header_title {
@@ -227,12 +227,16 @@
   display: flex;
   background-color: transparent;
   border: none;
+  outline: 2px solid transparent;
   transition: outline var(--time_step) ease;
   align-self: center;
   padding-inline: 0;
   cursor: pointer;
 }
 
+.sparks {
+  opacity:0;
+}
 .footer {
   margin: 50px auto 0;
   background-color: var(--background-clr);
@@ -316,7 +320,7 @@
   .card_label {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--shadow-color);
-    (text-stroke: 1px var(--shadow-color));
+    (text-shadow: 1px var(--shadow-color));
   }
 }
 
