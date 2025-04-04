@@ -36,10 +36,6 @@
   margin-block-end: 100px;
   justify-items: center;
 }
-.content-section {
-  margin: 0 auto;
-  max-inline-size: 700px;
-}
 
 .header {
   font-family: var(--accent-font);
@@ -49,7 +45,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  outline: 2px solid var(--color);
+  border: var(--main-border);
   background-color: var(--background-color);
   padding-block: 128px;
   margin-block: 103px;
@@ -77,7 +73,7 @@
 }
 
 .card {
-  outline: 2px solid var(--color);
+  border: var(--main-border);
   width: clamp (var(--content-size));
   background-color: white;
 }
@@ -92,7 +88,6 @@
 
 .card__image-container {
   position: relative;
-  margin: 0px 0px 5px 0px;
   outline: var(--main-border);
 }
 
@@ -114,6 +109,7 @@
   display: block;
   object-fit: cover;
   object-position: center;
+  aspect-ratio: 1 / 1;
   inline-size: 100%;
   max-block-size: 100%;
 }
@@ -124,6 +120,15 @@
   display: flex;
   flex-direction: column;
   gap: 27px;
+}
+
+.card__text {
+  font-size: 18px;
+  line-height: 21px;
+  font-variation-settings:
+    'wght' var(--text-weight),
+    'wdth' 100,
+    'opsz' 0;
 }
 
 .filter_bright {
@@ -214,20 +219,26 @@
 }
 
 .card__like-button {
+  padding: 10px 0;
+  font-weight: 400;
+  font-size: 14px;
   padding-block: 8px;
+  line-height: 90%;
   align-self: end;
   width: 130px;
   height: 38px;
 }
 
 .card__icon-button {
+  display: flex;
   position: relative;
+  align-items: center;
   height: 38px;
   display: flex;
   background-color: transparent;
   border: 2px solid transparent;
   transition: border var(--transform-time) ease;
-  align-self: center;
+  align-items: center;
   padding-inline: 0;
   cursor: pointer;
 }
@@ -244,14 +255,14 @@
   opacity: 0;
 }
 
-.footer {
+.save__button_container {
   margin: 50px auto 0;
   background-color: var(--background-clr);
   max-inline-size: 335px;
   padding-bottom: 103px;
 }
 
-.footer__button {
+.save__button {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -263,11 +274,11 @@
   background-color: #fff;
 }
 
-.footer__button:focus {
+.save__button:focus {
   outline: none;
 }
 
-.footer__button-image {
+.save__button-image {
   position: relative;
   z-index: 2;
   max-width: 21px;
@@ -331,17 +342,37 @@
 }
 
 @media (width <= 376px) {
+  .header {
+    block-size: 327px;
+    margin-block: 100px;
+  }
+
+  .card_title {
+    padding: 3.5px 10px 5.5px;
+    block-size: 33px;
+  }
+
   .card_label {
     top: 20px;
     right: 10px;
   }
 
-  .footer__button {
+  .card__text-container {
+    padding: 25px;
+  }
+
+  .save__button_container {
+    margin: 52px auto 0;
+    max-inline-size: 306px;
+    padding-bottom: 100px;
+  }
+
+  .save__button {
     display: flex;
     flex-direction: column;
   }
 
-  .footer__button-image {
+  .save__button-image {
     max-width: 28px;
   }
 }

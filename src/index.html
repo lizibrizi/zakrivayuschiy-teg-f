@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="ru">
-  <head> 
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Закрывающий тег</title>
@@ -14,12 +14,12 @@
     <link rel="apple-touch-icon" href="./images/favicon.png" />
   </head>
   <body class="page">
-    <header class="header header_size content-section">
+    <header class="header header_size">
       <h1 class="header_title">&lt;/html&gt;</h1>
       <p class="header_subtitle">закрывающий тэг</p>
     </header>
     <main>
-      <section class="cards content-section">
+      <section class="cards">
         <article class="card">
           <h2 class="card_title">
             Фритрек и нулевой спринт: Подготовка к работе
@@ -52,6 +52,7 @@
                 viewBox="0 0 39 36"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
               >
                 <g class="heart">
                   <path
@@ -114,6 +115,7 @@
                 viewBox="0 0 39 36"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
               >
                 <g class="heart">
                   <path
@@ -175,6 +177,7 @@
                 viewBox="0 0 39 36"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
               >
                 <g class="heart">
                   <path
@@ -237,6 +240,7 @@
                 viewBox="0 0 39 36"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
               >
                 <g class="heart">
                   <path
@@ -298,6 +302,7 @@
                 viewBox="0 0 39 36"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
               >
                 <g class="heart">
                   <path
@@ -359,6 +364,7 @@
                 viewBox="0 0 39 36"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
               >
                 <g class="heart">
                   <path
@@ -422,6 +428,7 @@
                 viewBox="0 0 39 36"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
               >
                 <g class="heart">
                   <path
@@ -487,6 +494,7 @@
                 viewBox="0 0 39 36"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
               >
                 <g class="heart">
                   <path
@@ -518,33 +526,33 @@
           </div>
         </article>
       </section>
-      <footer class="footer content-section">
+      <div class="save__button_container">
         <button
-          class="footer__button decorated_button"
+          class="save__button decorated_button"
           type="button"
           onclick="window['dialog'].showModal()"
           aria-controls="dialog"
         >
-          <svg class="footer__button-image" viewBox="0 0 40 40">
+          <svg class="save__button-image" viewBox="0 0 40 40">
             <use href="./images/svg/floppy.svg#floppy"></use>
           </svg>
           <span class="button__text decorated_button_text"
             >Сохранить на память</span
           >
         </button>
-      </footer>
-      <dialog class="dialog" id="dialog">
-        <form class="dialog__form" method="dialog">
-          <svg class="dialog__image" viewBox="0 0 40 40">
-            <use href="./images/svg/floppy.svg#floppy"></use>
-          </svg>
-          <p class="dialog__text">Вставьте дискету, чтобы продолжить</p>
-          <button class="dialog__button decorated_button" type="submit">
-            <span class="button__text">Ок</span>
-          </button>
-        </form>
-      </dialog>
+      </div>
     </main>
+    <dialog class="dialog" id="dialog">
+      <form class="dialog__form" method="dialog">
+        <svg class="dialog__image" viewBox="0 0 40 40">
+          <use href="./images/svg/floppy.svg#floppy"></use>
+        </svg>
+        <p class="dialog__text">Вставьте дискету, чтобы продолжить</p>
+        <button class="dialog__button decorated_button" type="submit">
+          <span class="button__text">Ок</span>
+        </button>
+      </form>
+    </dialog>
     <script src="./scripts/like.js"></script>
   </body>
 </html>

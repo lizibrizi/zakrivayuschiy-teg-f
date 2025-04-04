@@ -1,2 +1,3 @@
 https://github.com/lizibrizi/zakrivayuschiy-teg-f.git
-https://lizibrizi.github.io/zakrivayuschiy-teg-f/
+gh pages:
+https://lizibrizi.github.io/zakrivayuschiy-teg-f/src/
