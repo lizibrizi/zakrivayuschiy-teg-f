@@ -53,7 +53,6 @@
 
 .header_size {
   width: clamp(var(--content-size));
-  height: clamp(20.4375rem, 19.5352rem + 3.8498vw, 23rem);
 }
 
 .header_title {
@@ -346,6 +345,7 @@
 @media (width <= 376px) {
   .header {
     margin-block: 100px;
+    height: clamp(20.4375rem, 19.5352rem + 3.8498vw, 23rem);
   }
 
   .card_label {
