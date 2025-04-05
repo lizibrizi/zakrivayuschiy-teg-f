@@ -53,6 +53,7 @@
 
 .header_size {
   width: clamp(var(--content-size));
+  height: clamp(20.4375rem, 19.5352rem + 3.8498vw, 23rem);
 }
 
 .header_title {
@@ -74,12 +75,12 @@
 
 .card {
   border: var(--main-border);
-  width: clamp (var(--content-size));
+  width: clamp(var(--content-size));
   background-color: white;
 }
 
 .card_title {
-  padding: 5px 10px;
+  padding: 4.5px 24px 5px 10px;
   font-variation-settings: 'wght' var(--title-weight);
   color: var(--color);
   background-color: var(--background-color);
@@ -337,19 +338,14 @@
 ) {
   .card_label {
     text-shadow: none;
+
     -webkit-text-stroke: 1px var(--shadow-color);
   }
 }
 
 @media (width <= 376px) {
   .header {
-    block-size: 327px;
     margin-block: 100px;
-  }
-
-  .card_title {
-    padding: 3.5px 10px 5.5px;
-    block-size: 33px;
   }
 
   .card_label {
