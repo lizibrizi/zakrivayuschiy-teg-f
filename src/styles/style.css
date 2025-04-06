@@ -84,6 +84,9 @@
   color: var(--color);
   background-color: var(--background-color);
   font-size: var(--font-size);
+  mix-blend-mode: hard-light;
+  font-family: var(--accent-font);
+  font-weight: 555;
 }
 
 .card__image-container {
@@ -101,7 +104,7 @@
   text-shadow: 0 0 1px var(--shadow-color);
   -webkit-text-stroke: 1px var(--shadow-color);
   mix-blend-mode: hard-light;
-  opacity: 0.5;
+  opacity: 0;
   z-index: 1;
 }
 
